@@ -1,4 +1,4 @@
-## Centos 6 docker container to test ansible scripts
+# Centos 6 docker container to test ansible scripts
 
 Instructions to build
 ```
@@ -16,7 +16,7 @@ or if you prefer volumes, add your playbook to the ./ansible folder
 docker run -it -v $PWD/ansible:/ansible ansibletest
 ```
 
-#Note:
+##Note:
  Make sure your ansible folder is structured correctly e.g.:
 
 ├── roles
