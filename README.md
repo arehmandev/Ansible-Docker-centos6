@@ -18,14 +18,23 @@ docker run -it -v $PWD/ansible:/ansible ansibletest
 
 #Note:
  Make sure your ansible folder is structured correctly e.g.:
+
 ├── roles
+
 │   ├── git
+
 │   ├── nginx
+
 │   ├── php
+
 │   ├── python
+
 │   ├── redis
+
 │   └── yum_repos_d
+
 ├── setup..retry
+
 └── setup.yml
 
 This container is designed to execute the foremost .yml file e.g. setup.yml
