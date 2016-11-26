@@ -33,7 +33,7 @@ docker run -it -v $PWD/ansible:/ansible ansibletest
 
 │   └── yum_repos_d
 
-├── setup..retry
+├── setup.retry
 
 └── setup.yml
 
