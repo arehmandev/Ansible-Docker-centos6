@@ -9,9 +9,8 @@ Instructions to build
 Instructions to use
 
 ```
-docker run -it ansibletest ansible-playbook youransiblefolder/yourplaybook.yml
 ####
-or if you prefer volumes, add your playbook to the ./ansible folder
+Add your playbook to the ./ansible folder
 ####
 docker run -it -v $PWD/ansible:/ansible ansibletest
 ```
