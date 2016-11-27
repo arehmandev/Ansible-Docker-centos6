@@ -10,7 +10,7 @@ Instructions to use
 
 ```
 ####
-Add your playbook to the ./ansible folder
+Add your playbook to the ./ansible folder and cd 1 folder up (cd ..)
 ####
 docker run -it -v $PWD/ansible:/ansible ansibletest
 ```
