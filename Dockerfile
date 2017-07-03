@@ -1,5 +1,6 @@
 FROM centos:6
 ENV container docker
+ENV ANSIBLE_VERSION 2.2.3.0
 
 ADD ./ansible /ansible
 ADD ./entrypoint.sh /
@@ -23,6 +24,7 @@ RUN sed -i 's/#PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
 RUN echo 'root:docker.io' | chpasswd
 RUN /etc/init.d/sshd start
 
-RUN yum -y install git python-setuptools gcc sudo libffi-devel python-devel openssl-devel ansible
+RUN yum -y install git python-setuptools gcc sudo libffi-devel python-devel openssl-devel python-pip
+RUN pip install ansible==$ANSIBLE_VERSION
 RUN echo "localhost ansible_connection=local" >> /etc/ansible/hosts
 CMD bash /entrypoint.sh
